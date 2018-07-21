@@ -3,20 +3,17 @@
         <title>AMPidextrous blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">AMPidextrous Blog</a></h1>
-        </div>
+      <div>
+      <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
 
-        <div>
-            <p>published: 21.07.2018, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>I'm so excited to share who I am and all I am juggling in this thing called life.</p>
-        </div>
+  {% for post in posts %}
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
 
-        <div>
-            <p>published: 21.07.2018, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Let me first by telling you a little about me. I am the middle of three children since I was ten. Life hasn't been easy but I am truly BLESSED!</p>
-        </div>
     </body>
 </html>
